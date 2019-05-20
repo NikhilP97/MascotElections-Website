@@ -9,15 +9,10 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- My CSS styleSheet -->
     <link href="css/mystyles.css" rel="stylesheet">
+    <!-- Font Awesome -->
     <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
   <body background="images/background-pattern.png">
   <!-- start of navbar -->
@@ -26,20 +21,17 @@
         <img id="Qlogo" src="images/quantiphiLogo.png" class="rounded float-left " alt="Quantiphi Logo" height="91" width="200">
       </a> 
     </nav> 
-
-    
     <!-- end of navbar -->
-
-    <!-- m-4 p-3 -->
 
     <!-- main content -->
     <div class="container">
       <h1>Department: Facilites</h1>
       <div class="row ">
+        <!-- Department Description -->
         <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" style="padding-left: 0px">
           <p class="departmentDescription">Do id dolore laboris magna excepteur magna ut duis in labore ut deserunt laboris incididunt aute elit ut. Tempor dolore dolor nostrud magna sunt nostrud dolore quis fugiat dolore commodo qui culpa. Quis non cupidatat exercitation.</p>
         </div>
-
+        <!-- Button -->
         <div class="btnContainer col-lg-4 col-md-4 col-sm-12 col-xs-12" >
           <button id="nextDeptBtn" class=" btn  btn-dept btn-green" disabled onclick="window.location.href='votingPage.html'">Move on to the next department</button>
         </div>
@@ -49,6 +41,7 @@
       <span>(hover over each mascot to know its meaning)</span>
       <br>
       <div class="row text-center border">
+        <!-- Mascot Logos -->
         <div id="oyster" class="voting-logos col-lg-2 col-md-4 col-sm-6 col-xs-12" onclick="clickedLogo('oyster')">
           <figure>
             <img src="images/oyster-icon.PNG" alt="oysterIcon"> 
@@ -97,13 +90,15 @@
             Culpa veniam elit duis anim ullamco id exercitation velit enim do tempor ullamco.
           </span>
         </div>
+        <!-- End of Mascot Logos -->
       </div>
 
       <div id="showDetails" class="row ">
+        <!-- On click of any Logos show Additional Details -->
         <div class="eachColumn col-lg-4 col-md-12 col-sm-12 col-xs-12" style="margin-top: 10px">
           <div id="starRatingHeader"><b>Overall Rating for Facilities </b>(1-lowest, 5-highest)</div>
           <div class="row ">
-
+            <!-- Star Rating -->
             <div class="rateContainer col-lg-6">  
               <div class="rate">
                 <input  type="radio" id="star4" name="rate" value="4" onclick="clickedStar(4)"/>
@@ -120,7 +115,8 @@
               <div id="starText" ></div>
             </div>
           </div>
-          <div id="checkBoxContainer"><b>Share your reasons for selecting <span id="checkBoxNameHeader"></span></b></div>
+          <!-- CheckBoxes -->
+          <div id="checkBoxOuterContainer"><b>Share your reasons for selecting <span id="checkBoxNameHeader"></span></b></div>
           <label class="containerCheckBox">OneReprehenderit elit dolore eiusmod sed.
             <input type="checkbox" onclick="checkIfAllClicked('checkbox')">
             <span class="checkmark"></span>
@@ -141,6 +137,7 @@
             <span class="checkmark"></span>
           </label>
         </div>
+        <!-- More Reasons Text Fields -->
         <div class=" col-lg-4 col-md-12 col-sm-12 col-xs-12" style="margin-top: 10px">
           <div style="margin-bottom: 15px;"><b>Any more reasons?</b></div>
           <div style="display:flex;flex-direction:column;">
@@ -154,36 +151,18 @@
             <input class="moreReasonsText" placeholder="Cupidatat voluptate sit fugiat sint nostrud elit." type="text" style="flex:1;margin-bottom: 10px" onclick="checkIfAllClicked('moreReasons')">
           </div> 
         </div>
-
+        <!-- Suggestons Text Box -->
         <div class=" col-lg-4 col-md-12 col-sm-12 col-xs-12" style="margin-top: 10px">
           <div style="margin-bottom: 22px"><b>Suggestions</b></div>
             <textarea class="textAreaSize" wrap="hard" onclick="checkIfAllClicked('suggestions')"></textarea>
-        </div>
-        
-        
+        </div>  
       </div>
-
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-3.3.1.min.js"></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <!-- My js file to handle clicks -->
     <script src="js/myScript.js"></script>
-    
-
   </body>
 </html>

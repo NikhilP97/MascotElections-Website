@@ -1,7 +1,3 @@
-// clickedLogo(clickedID) => {
-// 	document.getElementById(clickedID).style.opacity = "0.5";
-// }
-
 let logoIDs = ['oyster', 'cat', 'whale', 'elephant', 'fish', 'goose']
 
 let logoNames = {
@@ -82,8 +78,6 @@ function checkIfAllClicked(clickedElement){
 		document.getElementById("nextDeptBtn").disabled = false;
 		document.getElementById("nextDeptBtn").style.backgroundColor = "#27b585";
 	}
-
-
 }
 
 
