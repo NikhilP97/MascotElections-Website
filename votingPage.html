@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Voting Page</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/mystyles.css" rel="stylesheet">
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body background="images/background-pattern.png">
+  <!-- start of navbar -->
+    <nav class="navbar navbar-light shadow p-3 mb-5 bg-white rounded" >
+      <a href="index.html">
+        <img id="Qlogo" src="images/quantiphiLogo.png" class="rounded float-left " alt="Quantiphi Logo" height="91" width="200">
+      </a> 
+    </nav> 
+
+    
+    <!-- end of navbar -->
+
+    <!-- m-4 p-3 -->
+
+    <!-- main content -->
+    <div class="container">
+      <h1>Department: Facilites</h1>
+      <div class="row ">
+        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" style="padding-left: 0px">
+          <p class="departmentDescription">Do id dolore laboris magna excepteur magna ut duis in labore ut deserunt laboris incididunt aute elit ut. Tempor dolore dolor nostrud magna sunt nostrud dolore quis fugiat dolore commodo qui culpa. Quis non cupidatat exercitation.</p>
+        </div>
+
+        <div class="btnContainer col-lg-4 col-md-4 col-sm-12 col-xs-12" >
+          <button id="nextDeptBtn" class=" btn  btn-dept btn-green" disabled onclick="window.location.href='votingPage.html'">Move on to the next department</button>
+        </div>
+      </div>
+      
+      <span><b>Choose your mascot for the department</b></span>
+      <span>(hover over each mascot to know its meaning)</span>
+      <br>
+      <div class="row text-center border">
+        <div id="oyster" class="voting-logos col-lg-2 col-md-4 col-sm-6 col-xs-12" onclick="clickedLogo('oyster')">
+          <figure>
+            <img src="images/oyster-icon.PNG" alt="oysterIcon"> 
+          </figure>
+          <span class="hover-content">
+            Esse nostrud labore ad incididunt minim et occaecat irure dolor ex id elit officia quis.
+          </span>
+        </div>
+        <div id="cat" class="voting-logos col-lg-2 col-md-4 col-sm-6 col-xs-12" onclick="clickedLogo('cat')">
+          <figure>
+            <img src="images/cat-icon.PNG?raw=true" alt="catIcon">
+          </figure>
+          <span class="hover-content">
+            Ut labore eu id adipisicing ex dolore elit consequat pariatur dolor fugiat pariatur duis in dolore ullamco.
+          </span>
+        </div>
+        <div id="whale" class="voting-logos col-lg-2 col-md-4 col-sm-6 col-xs-12" onclick="clickedLogo('whale')">
+          <figure>
+            <img src="images/whale-icon.PNG" alt="whaleIcon">
+          </figure>
+          <span class="hover-content">
+            Ad ea quis voluptate tempor aute est magna enim.
+          </span>
+        </div>
+        <div id="elephant" class="voting-logos col-lg-2 col-md-4 col-sm-6 col-xs-12" onclick="clickedLogo('elephant')">
+          <figure>
+            <img src="images/elephant-icon.PNG" alt="elephantIcon">
+          </figure>
+          <span class="hover-content">
+            Irure dolore qui anim qui consequat exercitation laborum in proident ex labore enim irure anim exercitation.
+          </span>
+        </div>
+        <div id="fish" class="voting-logos col-lg-2 col-md-4 col-sm-6 col-xs-12" onclick="clickedLogo('fish')">
+          <figure>
+            <img src="images/fish-icon.PNG" alt="fishIcon">
+          </figure>
+          <span class="hover-content">
+            Dolore dolor qui ad non in nostrud non sed voluptate.
+          </span>
+        </div>
+        <div id="goose" class="voting-logos col-lg-2 col-md-4 col-sm-6 col-xs-12" onclick="clickedLogo('goose')">
+          <figure>
+            <img src="images/goose-icon.PNG" alt="gooseIcon">
+          </figure>
+          <span class="hover-content">
+            Culpa veniam elit duis anim ullamco id exercitation velit enim do tempor ullamco.
+          </span>
+        </div>
+      </div>
+
+      <div id="showDetails" class="row ">
+        <div class="eachColumn col-lg-4 col-md-12 col-sm-12 col-xs-12" style="margin-top: 10px">
+          <div id="starRatingHeader"><b>Overall Rating for Facilities </b>(1-lowest, 5-highest)</div>
+          <div class="row ">
+
+            <div class="rateContainer col-lg-6">  
+              <div class="rate">
+                <input  type="radio" id="star4" name="rate" value="4" onclick="clickedStar(4)"/>
+                <label  for="star4" title="4">4 stars</label>
+                <input  type="radio" id="star3" name="rate" value="3" onclick="clickedStar(3)"/>
+                <label  for="star3" title="3">3 stars</label>
+                <input  type="radio" id="star2" name="rate" value="2" onclick="clickedStar(2)"/>
+                <label  for="star2" title="2">2 stars</label>
+                <input  type="radio" id="star1" name="rate" value="1" onclick="clickedStar(1)"/>
+                <label  for="star1" title="1">1 star</label>
+              </div>
+            </div>
+            <div id="starTextHeader" class="col-lg-6">
+              <div id="starText" ></div>
+            </div>
+          </div>
+          <div id="checkBoxContainer"><b>Share your reasons for selecting <span id="checkBoxNameHeader"></span></b></div>
+          <label class="containerCheckBox">OneReprehenderit elit dolore eiusmod sed.
+            <input type="checkbox" onclick="checkIfAllClicked('checkbox')">
+            <span class="checkmark"></span>
+          </label>
+
+          <label class="containerCheckBox">Consectetur qui. In esse aute esse minim reprehenderit.
+            <input type="checkbox" onclick="checkIfAllClicked('checkbox')">
+            <span class="checkmark"></span>
+          </label>
+
+          <label class="containerCheckBox">Lorem ipsum duis pariatur ut laboris dolore fugiat aliqua ut aute.
+            <input type="checkbox" onclick="checkIfAllClicked('checkbox')" >
+            <span class="checkmark"></span>
+          </label>
+
+          <label class="containerCheckBox">Lorem ipsum laborum dolore reprehenderit exercitation.
+            <input type="checkbox" onclick="checkIfAllClicked('checkbox')">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div class=" col-lg-4 col-md-12 col-sm-12 col-xs-12" style="margin-top: 10px">
+          <div style="margin-bottom: 15px;"><b>Any more reasons?</b></div>
+          <div style="display:flex;flex-direction:column;">
+            <input class="moreReasonsText" placeholder="Cupidatat voluptate sit fugiat sint nostrud elit." type="text" style="flex:1;margin-bottom: 10px" onclick="checkIfAllClicked('moreReasons')">
+            <input class="moreReasonsText" placeholder="Cupidatat voluptate sit fugiat sint nostrud elit." type="text" style="flex:1;margin-bottom: 10px" onclick="checkIfAllClicked('moreReasons')">
+            <input class="moreReasonsText" placeholder="Cupidatat voluptate sit fugiat sint nostrud elit." type="text" style="flex:1;margin-bottom: 10px" onclick="checkIfAllClicked('moreReasons')">
+            <input class="moreReasonsText" placeholder="Cupidatat voluptate sit fugiat sint nostrud elit." type="text" style="flex:1;margin-bottom: 10px" onclick="checkIfAllClicked('moreReasons')">
+            <input class="moreReasonsText" placeholder="Cupidatat voluptate sit fugiat sint nostrud elit." type="text" style="flex:1;margin-bottom: 10px" onclick="checkIfAllClicked('moreReasons')">
+            <input class="moreReasonsText" placeholder="Cupidatat voluptate sit fugiat sint nostrud elit." type="text" style="flex:1;margin-bottom: 10px" onclick="checkIfAllClicked('moreReasons')">
+            <input class="moreReasonsText" placeholder="Cupidatat voluptate sit fugiat sint nostrud elit." type="text" style="flex:1;margin-bottom: 10px" onclick="checkIfAllClicked('moreReasons')">
+            <input class="moreReasonsText" placeholder="Cupidatat voluptate sit fugiat sint nostrud elit." type="text" style="flex:1;margin-bottom: 10px" onclick="checkIfAllClicked('moreReasons')">
+          </div> 
+        </div>
+
+        <div class=" col-lg-4 col-md-12 col-sm-12 col-xs-12" style="margin-top: 10px">
+          <div style="margin-bottom: 22px"><b>Suggestions</b></div>
+            <textarea class="textAreaSize" wrap="hard" onclick="checkIfAllClicked('suggestions')"></textarea>
+        </div>
+        
+        
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/myScript.js"></script>
+    
+
+  </body>
+</html>
